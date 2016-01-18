@@ -25,7 +25,6 @@ def line_classifier(txt):
             if word in myDict[lang]:
                 score[lang] += 1
 
-    res = list(myDict.keys())[0]
     s = 0
     for lang in score:
         if score[lang] > s:
@@ -42,7 +41,6 @@ def line_classifier(txt):
                         if len(dict_word) > 2:
                             if dict_word in word or word in dict_word:
                                 score[lang] +=1
-        res = list(myDict.keys())[0]
         s = 0
         for lang in score:
             if score[lang] > s:
